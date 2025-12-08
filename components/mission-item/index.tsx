@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import { View, Text, StyleSheet, FlatList } from 'react-native';
-import {Image} from '@rneui/themed';
+import { Image } from '@rneui/themed';
+import React, { useEffect, useState } from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 // import { API, graphqlOperation } from 'aws-amplify';
 // import { getStructure } from '../../graphql/queries';
+import { IOrder, IStructure } from '@/dto';
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
-import { IMission, IStructure } from '@/dto';
 // import AWS from 'aws-sdk';
 // import Config from 'react-native-config'
 
@@ -17,7 +17,8 @@ import { IMission, IStructure } from '@/dto';
 dayjs.extend(relativeTime);
 
 export interface IMissionItemComponentProps {
-  mission: IMission
+  // mission: IMission
+  mission: IOrder
 }
 
 export const MissionItemComponent: React.FC<IMissionItemComponentProps> = ({mission}) => {
